@@ -6,12 +6,12 @@ const router = express.Router();
 
 router.get("/", productCtrl.getAllProducts);
 
-router.post("/", verifyToken, productCtrl.createProduct);
+router.post("/",  productCtrl.createProduct);
 
-router.put("/:productId", verifyToken, productCtrl.updateProduct);
+router.put("/:productId",  productCtrl.updateProduct);
 
-router.delete("/:productId", verifyToken, productCtrl.deleteProduct);
+router.delete("/:productId",  productCtrl.deleteProduct);
 
-router.get("/:productId", verifyToken, productCtrl.specificProduct);
+router.get("/:productId",  productCtrl.specificProduct);
 
 module.exports = router;

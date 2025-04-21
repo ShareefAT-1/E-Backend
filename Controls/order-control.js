@@ -24,7 +24,6 @@ module.exports.createorder = async (req, res) => {
 module.exports.getAllorders = async (req, res) => {
   try {
     const orders = await Order.find()
-      // .populate("user")
       .populate("products.productId");
     res.status(200).json({ message: "Order Created", orders });
   } catch (error) {

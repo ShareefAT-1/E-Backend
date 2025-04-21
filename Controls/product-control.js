@@ -1,6 +1,5 @@
 const Product = require("../models/product-model");
 
-// Get all products
 module.exports.getAllProducts = async (req, res) => {
   try {
     const products = await Product.find();
@@ -10,7 +9,6 @@ module.exports.getAllProducts = async (req, res) => {
   }
 };
 
-// Create a new product
 module.exports.createProduct = async (req, res) => {
   try {
     const productDetails = req.body;
