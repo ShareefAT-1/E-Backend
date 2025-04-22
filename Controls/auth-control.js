@@ -33,6 +33,8 @@ module.exports.login = async (req, res) => {
       return res.status(401).json({ message: "Invalid password" });
     }
 
+    console.log(process.env.jwt_secret)
+
     const token = jwt.sign(
       { id: user._id, role: user.role },
       process.env.jwt_secret,
